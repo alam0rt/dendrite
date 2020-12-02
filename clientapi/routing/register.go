@@ -574,6 +574,8 @@ func handleRegistrationFlow(
 	userAPI userapi.UserInternalAPI,
 ) util.JSONResponse {
 	// TODO: Shared secret registration (create new user scripts)
+	if r.Auth.Type == authtypes.LoginTypeSharedSecret {
+	}
 	// TODO: Enable registration config flag
 	// TODO: Guest account upgrading
 
